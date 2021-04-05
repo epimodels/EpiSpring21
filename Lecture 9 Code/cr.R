@@ -1,10 +1,11 @@
 library(survival)
 library(survminer)
+
 mean <- 5
 rate_time <- 1/mean
 
-time_one <- rexp(500, rate = rate_time)
-time_two <- rexp(500, rate = rate_time)
+time_one <- rexp(200, rate = rate_time)
+time_two <- rexp(200, rate = rate_time)
 times <- as.data.frame(cbind(time_one,time_two))
 
 times$event_time <- NA
